@@ -64,19 +64,3 @@ The dataset contains retinal images categorized into the following classes:
 - **Retinal Detachment**
 - **Retinitis Pigmentosa**
 
-Each class has its own folder containing the corresponding images. The dataset should be organized as follows:
-train/
-├── Diabetic Retinopathy/
-│ ├── image1.jpg
-│ ├── image2.jpg
-│ └── ...
-├── Healthy/
-│ ├── image1.jpg
-│ ├── image2.jpg
-│ └── ...
-├── Pterygium/
-│ └── ...
-├── Retinal Detachment/
-│ └── ...
-└── Retinitis Pigmentosa/
-└── ...
