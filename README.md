@@ -1,1 +1,1 @@
-# Anemia-Detection-ML
+# Eye-Disease-Detection-ML
