@@ -1,0 +1,12 @@
+flask
+flask-cors
+torch
+torchvision
+opencv-python
+scikit-learn
+numPy
+matplotlib
+tqdm
+
+
+
