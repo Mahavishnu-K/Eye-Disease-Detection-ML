@@ -11,6 +11,7 @@ node_modules
 src/services/ChatService.js
 .env
 .venv/
+backend/src/uploads/
 dist
 dist-ssr
 *.local

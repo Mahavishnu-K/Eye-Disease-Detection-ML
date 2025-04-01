@@ -19,7 +19,6 @@ function App() {
   const [chatLoading, setChatLoading] = useState(false)
   const messagesEndRef = useRef(null)
 
-  // Existing functions
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0]
     if (selectedFile) {

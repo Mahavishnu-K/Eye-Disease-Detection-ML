@@ -12,7 +12,13 @@ import base64
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}}) 
+CORS(app, resources={
+    r"/*": {
+        "origins": ["*"],
+        "methods": ["GET", "POST"],
+        "allow_headers": ["Content-Type"]
+    }
+})
 
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -50,6 +56,11 @@ def health_check():
             "predict": "/predict (POST)"
         }
     })
+
+@app.route('/favicon.ico')
+def favicon():
+    return '', 404  
+
 
 def preprocess_image(image_path):
     transform = transforms.Compose([
