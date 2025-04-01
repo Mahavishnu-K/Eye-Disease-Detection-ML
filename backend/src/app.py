@@ -12,7 +12,7 @@ import base64
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)  
+CORS(app, resources={r"/*": {"origins": "*"}}) 
 
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
@@ -40,6 +40,16 @@ class_names = [
     "Retinal Detachment",
     "Retinitis Pigmentosa"
 ]
+
+@app.route('/')
+def health_check():
+    return jsonify({
+        "status": "healthy",
+        "message": "Eye Disease Detection API",
+        "endpoints": {
+            "predict": "/predict (POST)"
+        }
+    })
 
 def preprocess_image(image_path):
     transform = transforms.Compose([
@@ -143,4 +153,5 @@ def predict():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    port = int(os.environ.get("PORT", 5000)) 
+    app.run(host='0.0.0.0', port=port)
