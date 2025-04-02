@@ -5,14 +5,12 @@ import { BsSend } from "react-icons/bs";
 import ChatService from './services/ChatService'
 
 function App() {
-  // Existing state
   const [file, setFile] = useState(null)
   const [preview, setPreview] = useState(null)
   const [result, setResult] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
   
-  // Chat state
   const [showChat, setShowChat] = useState(false)
   const [messages, setMessages] = useState([])
   const [input, setInput] = useState('')
@@ -53,7 +51,6 @@ function App() {
     }
   }
 
-  // Chat functions
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
   }

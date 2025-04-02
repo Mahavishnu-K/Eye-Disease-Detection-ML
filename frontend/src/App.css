@@ -233,6 +233,15 @@
     border: 1px solid rgba(58, 123, 213, 0.2);
     background-color: var(--bg-tertiary);
   }
+
+  @media (max-width: 768px){
+    .image-result img{
+      width: 300px;
+    }
+    .image-result{
+      width: 300px;
+    }
+  }
   
   .ask-about-results-button {
     background-color: var(--bg-tertiary);
@@ -254,8 +263,8 @@
   /* Chat styling */
   .chat-toggle-button {
     position: fixed;
-    bottom: 30px;
-    right: 20px;
+    bottom: 10px;
+    right: 10px;
     background: var(--gradient-blue);
     color: black;
     border: none;
